@@ -4,6 +4,9 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     speed: 700,
     spaceBetween: 0,
     loop:true,
+    autoplay: true,
+    delay: 1000,
+    effect: "fade",
   });
 
   const portfolioSwiper = new Swiper('.portfolioSwiper', {
