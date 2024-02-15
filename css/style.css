@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital@0;1&family=Roboto+Condensed:ital,wght@0,700;1,700&display=swap");
 html, body {
   background-color: #DCDCDC;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 ._container {
@@ -36,6 +39,7 @@ html, body {
   font-size: 30px;
   width: 480px;
   margin: 0 0 0 auto;
+  font-weight: 400;
 }
 ._title__body p span {
   opacity: 0;
@@ -64,6 +68,7 @@ html, body {
   font-size: 20px;
   color: #fff;
   text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 585px) {
   .button__body {
@@ -113,6 +118,7 @@ html, body {
      object-fit: cover;
   width: 100%;
   height: 100%;
+  filter: brightness(60%);
 }
 .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title {
   position: absolute;
@@ -121,7 +127,7 @@ html, body {
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  width: 480px;
+  width: 680px;
 }
 @media (max-width: 495px) {
   .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title {
@@ -131,8 +137,7 @@ html, body {
 .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title h3 {
   font-size: 60px;
   font-weight: 700;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  line-height: 100%;
 }
 @media (max-width: 920px) {
   .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title h3 {
@@ -145,11 +150,10 @@ html, body {
   }
 }
 .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title p {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  margin: 70px 0 100px;
+  line-height: 140%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0 5px;
   font-size: 30px;
-  font-weight: 700;
 }
 @media (max-width: 920px) {
   .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title p {
@@ -159,6 +163,35 @@ html, body {
 @media (max-width: 520px) {
   .pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title p {
     font-size: 20px;
+  }
+}
+.pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title .pictures__slide__item__title__number {
+  position: relative;
+  font-size: 40px;
+  display: block;
+  color: #ddb88b;
+  width: 46%;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  margin: 0 auto 50px;
+}
+.pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title .pictures__slide__item__title__number span {
+  color: #D3E2EF;
+}
+.pictures .pictures__slide .pictures__slide__item .pictures__slide__item__title .pictures__slide__item__title__number::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  animation: numberPhone 2s infinite alternate;
+}
+@keyframes numberPhone {
+  100% {
+    width: 10%;
   }
 }
 
@@ -184,6 +217,11 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  transition: 0.2s ease-in-out;
+}
+.quality .quality__item:hover {
+  box-shadow: 0px 5px 10px #8b8888;
+  scale: 1.02;
 }
 @media (max-width: 1050px) {
   .quality .quality__item {
@@ -491,7 +529,10 @@ html, body {
   }
 }
 
-@media (max-width: 880px) {
+.portfolio {
+  padding: 0 5px;
+}
+@media (max-width: 940px) {
   .portfolio #revers {
     flex-direction: column-reverse;
   }
@@ -499,16 +540,26 @@ html, body {
 .portfolio .portfolio__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
 }
-@media (max-width: 880px) {
+@media (max-width: 1040px) {
   .portfolio .portfolio__container {
     flex-direction: column;
   }
 }
+.portfolio .portfolio__container:not(:last-child) {
+  margin-bottom: 50px;
+}
 .portfolio .portfolio__container .portfolio__container__title {
-  width: 500px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 20px;
+}
+@media (max-width: 1040px) {
+  .portfolio .portfolio__container .portfolio__container__title {
+    width: 100%;
+    margin: 0;
+  }
 }
 @media (max-width: 510px) {
   .portfolio .portfolio__container .portfolio__container__title {
@@ -516,62 +567,93 @@ html, body {
   }
 }
 .portfolio .portfolio__container .portfolio__container__title h3 {
-  font-size: 30px;
+  font-size: 80px;
   font-weight: 700;
   width: 300px;
+  text-transform: uppercase;
+}
+@media (max-width: 1040px) {
+  .portfolio .portfolio__container .portfolio__container__title h3 {
+    text-align: right;
+    width: 100%;
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio .portfolio__container .portfolio__container__title h3 {
+    font-size: 30px;
+  }
 }
 .portfolio .portfolio__container .portfolio__container__title p {
-  margin-top: 50px;
+  flex: 1;
+  width: 50%;
   font-size: 25px;
-  line-height: 130%;
+  line-height: 110%;
+  border-top: 1px solid #131212;
+  padding-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 1120px) {
+  .portfolio .portfolio__container .portfolio__container__title p {
+    width: 80%;
+  }
 }
 .portfolio .portfolio__container .portfolio__container__images {
   position: relative;
-  width: 575px;
-  height: 640px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #131212;
+  display: flex;
+  gap: 15px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1040px) {
   .portfolio .portfolio__container .portfolio__container__images {
-    width: 375px;
-    height: 100%;
+    justify-content: center;
   }
 }
-@media (max-width: 880px) {
-  .portfolio .portfolio__container .portfolio__container__images {
-    margin-top: 30px;
+.portfolio .portfolio__container .portfolio__container__images__left h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 1260px) {
+  .portfolio .portfolio__container .portfolio__container__images__left h4 {
+    font-size: 25px;
   }
 }
-@media (max-width: 380px) {
-  .portfolio .portfolio__container .portfolio__container__images {
-    width: 100%;
+@media (max-width: 1040px) {
+  .portfolio .portfolio__container .portfolio__container__images__left h4 {
+    font-size: 18px;
   }
 }
-@media (max-width: 950px) {
-  .portfolio .portfolio__container .portfolio__container__images .portfolio__container__images__visible {
+@media (max-width: 730px) {
+  .portfolio .portfolio__container .portfolio__container__images__left {
     display: none;
   }
 }
-.portfolio .portfolio__container .portfolio__container__images .portfolio__container__images__invisible {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  transition: 0.3s ease-in-out;
-  transform: translateY(200%);
+.portfolio .portfolio__container .portfolio__container__images__visible {
+  width: 300px;
 }
-@media (max-width: 950px) {
-  .portfolio .portfolio__container .portfolio__container__images .portfolio__container__images__invisible {
-    display: block;
-    position: static;
-    transform: translateY(0%);
+.portfolio .portfolio__container .portfolio__container__images__visible video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 415px) {
+  .portfolio .portfolio__container .portfolio__container__images__visible {
+    width: 100%;
   }
 }
-.portfolio .portfolio__container .portfolio__container__images:hover .portfolio__container__images__invisible {
-  transform: translateY(0%);
+.portfolio .portfolio__container .portfolio__container__images__invisible {
+  width: 400px;
+}
+.portfolio .portfolio__container .portfolio__container__images__invisible video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 415px) {
+  .portfolio .portfolio__container .portfolio__container__images__invisible {
+    width: 100%;
+  }
 }
 .portfolio .portfolio__swiper {
   position: relative;

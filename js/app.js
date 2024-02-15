@@ -5,7 +5,7 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     spaceBetween: 0,
     loop:true,
     autoplay: true,
-    delay: 1000,
+    delay: 3000,
     effect: "fade",
   });
 
