@@ -5,7 +5,7 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     spaceBetween: 0,
     loop:true,
     autoplay: true,
-    delay: 3000,
+    delay: 8000,
     effect: "fade",
   });
 
@@ -79,4 +79,27 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
         slidesPerView: 4.5,
       }
     }
+  });
+
+
+
+  // открытие и закрытие меню бургера
+  document.addEventListener('DOMContentLoaded', function () {
+    const burgerBtn = document.getElementById('burgerBtn');
+    const menu = document.getElementById('menu');
+  
+    burgerBtn.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+  
+    document.addEventListener('click', function (event) {
+      const isClickInsideMenu = menu.contains(event.target);
+      const isClickOnBurgerBtn = burgerBtn.contains(event.target);
+      if (!isClickInsideMenu && !isClickOnBurgerBtn && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
   });

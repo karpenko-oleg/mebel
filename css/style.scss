@@ -10,7 +10,7 @@ html, body{
     background-color: #DCDCDC;
     font-family: "Roboto Condensed", sans-serif;
 }
-
+// класс используемый для взятия в контейнер
 ._container{
     width: 1250px;
     margin: 0 auto;
@@ -19,6 +19,7 @@ html, body{
         width: 100%;
     }
 }
+// класс для названия и маленького текста
 ._title__body{
     padding: 50px 0;
     color: #000;
@@ -55,6 +56,7 @@ html, body{
         }
     }
 }
+// Класс кнопки
 .button__body{
     border: 1px solid #fff;
     background-color: #3C6C7F;
@@ -63,13 +65,39 @@ html, body{
     color: #fff;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-
+    position: relative;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer;
+    span{
+        display: block;
+        width: 10px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 0px 25px #adaaaa;
+        opacity: 0.1;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: buttonBody 3s ease-in-out infinite alternate;
+        @keyframes buttonBody {
+            0%{transform: translateX(0);}
+            100%{transform: translateX(220px);}
+        }
+    }
     @media (max-width: 585px) {
         display: block;
         text-align: center;
     }
 }
-
+// открытие бургера
+.menu {
+    display: none;
+  }
+.menu.open {
+    display: block;
+}
 
 
 
@@ -88,11 +116,54 @@ html, body{
             font-size: 20px;
         }
     }
-    a{
-        font-size: 30px;
-        color: #fff;
-        @media (max-width: 520px) {
-            font-size: 20px;
+    .burger-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+      .burger-line {
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: transform 0.3s ease;
+      }
+    .menu{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #002A32;
+        .menu-logo{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+        }
+        nav ul{
+            width: 60px;
+            height: 80vh;
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+            justify-content: center;
+            margin:  0 auto;
+            // text-align: center;
+            li a{
+                color: #fff;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }
@@ -597,6 +668,94 @@ html, body{
         justify-content: center;
     }
 }
+.price{
+    p{
+        margin-top: 30px;
+    }
+    .price__container{
+        width: 800px;
+        box-shadow: 0 0 10px #6f6d6d;
+        padding: 25px;
+        border-radius: 30px;
+        font-size: 22px;
+        margin: 0 auto;
+        @media (max-width: 810px) {
+            width: 100%;
+        }
+        .price__subtitle{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h5{
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+        
+        .price__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-weight: 400;
+            row-gap: 15px;
+            strong{
+                text-align: right;
+            }
+        }
+    }
+}
+.calculation{
+    .calculation__container{
+        .calculation__item_2{
+            margin: 0 auto;
+        }
+        .calculation__item_3{
+            margin: 0 0 0 auto;
+        }
+        :not(:last-child){
+            margin-bottom: 20px;
+        }
+
+      .calculation__item{
+        width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #131212;
+        border-radius: 20px;
+        padding: 15px;
+        position: relative;
+        @media (max-width: 460px){
+            width: 100%;
+        }
+        .calculation__item__title{
+            width: 200px;
+            .calculation__item__title_number{
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 30px;
+                width: 100px;
+                margin-bottom: 30px;
+                border: 1px solid #131212;
+                
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+        .calculation__item__images{
+            width: 150px;
+            height: 150px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+      }  
+
+    }
+}
 .comments{
     margin-top: 100px;
     height: 100%;
@@ -615,6 +774,7 @@ html, body{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: brightness(60%);
         }
         .commentsSwiper{
             .commentsSwiper__slide{

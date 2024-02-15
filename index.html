@@ -15,7 +15,23 @@
     <div class="wrapper">
         <header class="header ">
             <h2 class="header__logo">ЛенМастерская<br>перетяжки</h2>
-            <a class="header__number" href="#">8-800-555-35-35</a>
+            <button class="burger-btn" id="burgerBtn" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
+            <div id="menu" class="menu">
+                <a class="menu-logo" href="#">ЛенМастерская<br>перетяжки</a>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="./img/header/home.svg" alt=""><strong>Главная</strong></a></li>
+                    <li><a href="#"><img src="./img/header/blog.svg" alt=""><strong>Умения</strong></a></li>
+                    <li><a href="#"><img src="./img/header/galery.svg" alt=""><strong>Портфолио</strong></a></li>
+                    <li><a href="#"><img src="./img/header/otzuvi.svg" alt=""><strong>Отзывы</strong></a></li>
+                    <li><a href="#"><img src="./img/header/kontacti.svg" alt=""><strong>Контакты</strong></a></li>
+                </ul>
+            </nav>
+            </div>
         </header>
         
         <main>
@@ -29,7 +45,7 @@
                                     <h3>Мы превратим в реальсность ваши желания</h3>
                                     <p>Доверьте нам свою старую мебель и получите обновленную красоту и комфорт!</p>
                                     <a class="pictures__slide__item__title__number" href="tel:">+7<span>-</span>929<span>-</span>797<span>-</span>50<span>-</span>91</a>
-                                    <a class="button__body" href="#">Вызвать мастера</a>
+                                    <a class="button__body" href="#"><span></span>Вызвать мастера</a>
                                 </div>
                                 
                             </div>
@@ -40,7 +56,7 @@
                                 <div class="pictures__slide__item__title">
                                     <h3>Вдохните новую жизнь вашей мебели</h3>
                                     <p style="margin-bottom: 50px;">Из обыденной мебели в произведение искусства - ваш интерьер в новом стиле и комфорте</p>
-                                    <a class="button__body" href="#">Вызвать мастера</a>
+                                    <a class="button__body" href="#"><span></span>Вызвать мастера</a>
                                 </div>
                                 
                             </div>
@@ -51,7 +67,7 @@
                                 <div class="pictures__slide__item__title">
                                     <h3>Доверьте обновление вашей мебели НАМ</h3>
                                     <p style="margin-bottom: 50px;">У нас огромный опыт и мы гарантируем высочайшее качество работ - ваша мебель в надежных руках!</p>
-                                    <a class="button__body" href="#">Вызвать мастера</a>
+                                    <a class="button__body" href="#"><span></span>Вызвать мастера</a>
                                 </div>
                                 
                             </div>
@@ -161,6 +177,65 @@
                 </div>
                 <div class="portfolio__button"><a class="button__body" href="#">узнать цену</a></div>
             </section>
+            <section class="price">
+                <div class="_title__body _container">
+                    <h4>Сколько <br> стоит</h4>
+                    <p><span>............................</span>узнайте приблизительные расценки на перетяжку мебели или ее ремонт</p>
+                </div>
+                <div class="price__container _container">
+                    <div class="price__subtitle"><h4>Вид работ</h4><strong>Стоимость/руб</strong></div>
+                    <h5>Стоимость перетяжки мебели</h5>
+                    <div class="price__content">
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                    </div>
+                </div>
+                <p class="_container">Cтоимость услуги определяется индивидуально, в зависимости от объема работ и используемых материалов. Вы всегда можете позвонить в нашу компанию, отправить фото мебели или  написать специалисту, чтобы рассказать вашу ситуацию. Он более точно скажет сумму, которую необходимо затратить для ремонта мебели. У нас установлен минимальный порог цен, представленный в прайс-листе на сайте, с которым каждый пользователь может ознакомиться.</p>
+            </section>
+            <section class="calculation">
+                <div class="_title__body _container">
+                    <h4>Расчет<br>по фото</h4>
+                    <p><span>.................</span>для вашего удоства мы сделаем рассчет стоимость прямо сейчас онлайн!</p>
+                </div>
+                <div class="calculation__container _container">
+                    <div class="calculation__item">
+                        <div class="calculation__item__title">
+                            <div class="calculation__item__title_number">Шаг 1</div>
+                            <p>Отсканируйте QR-код, либо кликните на надпись <a href="#">WhatsApp</a></p>
+                        </div>
+                        <div class="calculation__item__images">
+                            <img src="./img/calculation/qr.png" alt="">
+                        </div>
+                    </div>
+                    <div class="calculation__item calculation__item_2">
+                        <div class="calculation__item__title">
+                            <div class="calculation__item__title_number">Шаг 2</div>
+                            <p>Пришлите нам фото Вашей мебели WhatsApp и напишите что нужно сделать</a></p>
+                        </div>
+                        <div class="calculation__item__images">
+                            <img src="./img/calculation/item_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="calculation__item calculation__item_3">
+                        <div class="calculation__item__title">
+                            <div class="calculation__item__title_number">Шаг 3</div>
+                            <p>Шаг 3
+                                Мы расчитаем стоимость работ, укажем сроки  и отправим иам ответ в течении 15 минут<a href="#">WhatsApp</a></p>
+                        </div>
+                        <div class="calculation__item__images">
+                            <img src="./img/calculation/item_2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="partners">
                 <div class="_title__body _container">
                     <h4>С КЕМ МЫ <br> РАБОТАЛИ</h4>
@@ -179,24 +254,24 @@
                         <div class="commentsSwiper swiper">
                             <div class="commentsSwiper_wrapper swiper-wrapper">
                               <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1" data-swiper-parallax="-120" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_1" src="./img/commets/image_1.png" alt="">
                                 <img class="commentsSwiper__slide__item_2" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3" data-swiper-parallax="-140" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
                               </div>
                               <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1" data-swiper-parallax="-100" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2" data-swiper-parallax="-200" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_1"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
                                 <img class="commentsSwiper__slide__item_3" src="./img/commets/image_1.png" alt="">
                               </div>
                               <div class="commentsSwiper__slide swiper-slide" >
                                 <img class="commentsSwiper__slide__item_1" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2" data-swiper-parallax="-130" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3" data-swiper-parallax="-200" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
                               </div>
                               <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1" data-swiper-parallax="-100" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2" data-swiper-parallax="-200" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3" data-swiper-parallax="-130" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_1"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
                               </div>
                               
                             </div>
