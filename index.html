@@ -42,6 +42,36 @@
         </header>
         
         <main>
+            <div id="popup" class="popup">
+                <div class="popup__container">
+                    <h2>Заполните заявку</h2>
+                    <form>
+                        <h5>Ваше имя</h5>
+                        <input type="name" placeholder="Ваше имя">
+                        <h5>Ваш номер телефона</h5>
+                        <input type="tel" placeholder="Номер телефона">
+                        <h5>Вид работы</h5>
+                        <textarea name="text" placeholder="Введите, что хотите перетянуть и какую хотите ткань" cols="30" rows="5"></textarea>
+                    </form>
+                    <button class="closePopup" onclick="closePopup()"><img src="./img/popUp/close.svg" alt=""></button>
+                </div>
+            </div>
+            <div id="popup__sale" class="popup__sale">
+                <div class="popup__sale__container">
+                    <div class="popup__sale__text">
+                        <h2>Выгодное предложение!</h2>
+                        <p>Получите скидку на покупку тканей при оформлении заявки на перетяжку мебели. Наша команда готова предложить вам широкий выбор качественных тканей для обновления вашей мебели по выгодной цене. Свяжитесь с нами уже сегодня, чтобы получить подробности и сделать заказ.</p>
+                        <form>
+                            <h5>Ваше имя</h5>
+                            <input type="text">
+                            <h5>Ваш номер телефона</h5>
+                            <input type="text" >
+                        </form>
+                    </div>
+                    <img class="popup__sale__img" src="./img/proposal/itemBg1.png" alt="">
+                    <button class="closePopup" onclick="closePopupSale()"><img src="./img/popUp/close.svg" alt=""></button>
+                </div>
+            </div>
             <section class="pictures">
                 <div class="pictures__swiper swiper">
                     <div class="pictures__wrapper swiper-wrapper">
@@ -53,7 +83,7 @@
                                     <p>Доверьте нам свою старую мебель и получите обновленную красоту и комфорт!</p>
                                     <!-- <a class="pictures__slide__item__title__number" href="tel:">+7-929-797-50-91</a> -->
                                     <div class="pictures__slide__item__title__kontact">
-                                        <a class="button__body" href="#"><span></span>Вызвать мастера</a>
+                                        <button onclick="openPopup()" class="button__body" >Вызвать мастера</button>
                                         <a class="pictures__slide__item__title__kontact__button button__pozvoni" href="#">Позвонить сейчас</a>
                                     </div>
                                     
@@ -68,7 +98,7 @@
                                     <h3>Вдохните новую жизнь вашей мебели</h3>
                                     <p >Из обыденной мебели в произведение искусства - ваш интерьер в новом стиле и комфорте</p>
                                     <div class="pictures__slide__item__title__kontact">
-                                        <a class="button__body" href="#"><span></span>Вызвать мастера</a>
+                                        <button onclick="openPopup()" class="button__body"><span></span>Вызвать мастера</button>
                                         <a class="pictures__slide__item__title__kontact__button button__pozvoni" href="#">Позвонить сейчас</a>
                                     </div>                                </div>
                                 
@@ -81,10 +111,10 @@
                                     <h3>Доверьте обновление вашей мебели НАМ</h3>
                                     <p>У нас огромный опыт и мы гарантируем высочайшее качество работ - ваша мебель в надежных руках!</p>
                                     <div class="pictures__slide__item__title__kontact">
-                                        <a class="button__body" href="#"><span></span>Вызвать мастера</a>
+                                        <button onclick="openPopup()" class="button__body" href="#"><span></span>Вызвать мастера</button>
                                         <a class="pictures__slide__item__title__kontact__button button__pozvoni" href="#">Позвонить сейчас</a>
-                                    </div>                                </div>
-                                
+                                </div>                                
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -126,6 +156,7 @@
                         <div id="item-6">ЛЮБОЙ ТЕКСТИЛЬНЫЙ ЭЛЕМЕНТ</div>
                         <div id="item-7">КУШЕТКИ</div>
                         <div id="item-8">стеновые панели</div>
+                        <div id="item-9">рестораны</div>
                     </div>
                 </div>
             </section>
@@ -148,7 +179,7 @@
 
                     <div class="portfolio__container__images">
                         <div class="portfolio__container__images__right"><video class="portfolio__container__images__invisible" src="./img/portfolio/2_1.mp4" alt="" type='video/mp4' muted="muted" autoPlay  loop></video></div>
-                        <div class="portfolio__container__images__left"><video class="portfolio__container__images__visible" src="./img/portfolio/2_2.mp4" alt="" type='video/mp4' muted="muted" autoPlay  loop><h4>Обновление кресла</h4></div>
+                        <div class="portfolio__container__images__left"><video class="portfolio__container__images__visible" src="./img/portfolio/2_2.mp4" alt="" type='video/mp4' muted="muted" autoPlay  loop></video><h4>Элегантный взгляд</h4></div>
                     </div>
                     <div class="portfolio__container__title">
                         <p>Особое внимание к деталям и творческий подход, становятся особым вызовом и источником вдохновения для профессионалов в перетяжки мебели.</p>
@@ -157,11 +188,11 @@
                 </div>
                 <div class="portfolio__container">
                     <div class="portfolio__container__title">
-                        <p>Есть замечательная возможность придать новую жизнь и внести уникальный стиль в интерьер своего дома, которые подчеркнут индивидуальность и характер пространства.</p>
+                        <p>Качественная перетяжка мебели - наша страсть и профессия. Доверьте свою мебель нашей команде и наслаждайтесь результатом с уверенностью в гарантии.</p>
                         <h3>Гарантия</h3>
                     </div>
                     <div class="portfolio__container__images">
-                        <div class="portfolio__container__images__left"><img class="portfolio__container__images__visible" src="./img/portfolio/стул_7_2.jpg" alt=""><h4>Обновленный стул</h4></div>
+                        <div class="portfolio__container__images__left"><img class="portfolio__container__images__visible" src="./img/portfolio/стул_7_2.jpg" alt=""><h4>Современный стиль</h4></div>
                         <div class="portfolio__container__images__right"><img class="portfolio__container__images__invisible" src="./img/portfolio/стул_7.jpg" alt=""></div>
                     </div>
                 </div>
@@ -192,27 +223,33 @@
             </section>
             <section class="price">
                 <div class="_title__body _container">
-                    <h4>Цены</h4>
+                    <h4>Стоимость</h4>
                     <p><span>............................</span>узнайте приблизительные расценки на перетяжку мебели или ее ремонт</p>
                 </div>
                 <div class="price__container _container">
                     <div class="price__subtitle"><h4>Вид работ</h4><strong>Стоимость/руб</strong></div>
                     <h5>Стоимость перетяжки мебели</h5>
                     <div class="price__content">
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
-                        <h6>Перетяжка дивана</h6><strong>от 6000 руб</strong>
+                        <h6>Подлокотники дивана</h6><strong>от 900 руб</strong>
+                        <h6>Спинка дивана</h6><strong>от 3200 руб</strong>
+                        <h6>Угловой диван</h6><strong>от 6150 руб</strong>
+                        <h6>Кухонный диван</h6><strong>от 4900 руб</strong>
+                        <h6>Компьютерное кресло</h6><strong>от 1100 руб</strong>
+                        <h6>Мягкое кресло</h6><strong>от 3220 руб</strong>
+                        <h6>Парикмахерское кресло</h6><strong>от 1650 руб</strong>
+                        <h6>Кухонный стул</h6><strong>от 850 руб</strong>
+                        <h6>Мягкие стулья</h6><strong>от 1650 руб</strong>
+                        <h6>Барный стул</h6><strong>от 550 руб</strong>
+                        <h6>Офисный стул</h6><strong>от 550 руб</strong>
+                        <h6>Кровать с мягким изголовьем</h6><strong>от 3400 руб</strong>
+                        <h6>Кресло кровать</h6><strong>от 3200 руб</strong>
+                        <h6>Детская кровать</h6><strong>от 2250 руб</strong>
+                        <h6>Изголовье кровати</h6><strong>от 1650 руб</strong>
+                        <h6>Офисный стул</h6><strong>от 550 руб</strong>
                     </div>
                 </div>
                 <p class="_container">Cтоимость услуги определяется индивидуально, в зависимости от объема работ и используемых материалов. Вы всегда можете позвонить в нашу компанию, отправить фото мебели или  написать специалисту, чтобы рассказать вашу ситуацию. Он более точно скажет сумму, которую необходимо затратить для ремонта мебели. У нас установлен минимальный порог цен, представленный в прайс-листе на сайте, с которым каждый пользователь может ознакомиться.</p>
-                <div class="price__button"><a class="button__body" href="#">узнать цену</a></div>
+                <div class="price__button"><button class="button__body" onclick="openPopup()">узнать цену</button></div>
 
             </section>
             <section class="calculation">
@@ -250,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="calculation__button _container"><a class="button__body" href="#">расчитать цену</a></div>
+                <div class="calculation__button _container"><button class="button__body" onclick="openPopup()">расчитать цену</button></div>
             </section>
             <section class="partners">
                 <div class="_title__body _container">
@@ -259,8 +296,8 @@
                 </div>
                 <div class="partners__container">
                     <div class="partners__text">
-                        <h6>Крупные компании которым мы оказывали услуги</h6>
-                        <p>Мы имеем опыт работы с крупными компаниями, и готовы предложить нашу экспертизу и новым клиентам. Наша компания гордится своими услугами, которые признаны лучшими на рынке. Мы стремимся к высочайшему качеству во всем, что делаем, и наш опыт работы с крупными компаниями является подтверждением этого.</p>
+                        <h6>Наши клиенты</h6>
+                        <p>Мы работали с крупными компаниями, и готовы предложить нашу экспертизу новым клиентам. Наша компания гордится своими услугами, которые признаны лучшими на рынке. Мы стремимся к высочайшему качеству во всем, что делаем, и наш опыт работы с крупными компаниями является подтверждением этому.</p>
                         
                     </div>
                     <div class="partners__images">
@@ -345,7 +382,7 @@
                 <div class="proposal__container _container">
                     <h2>Хотите узнать стоимость? </h2>
                     <p><span>Получите бесплатную консультацию уже сегодня!</span> Это ни к чему вас не обязывает, но поможет воплотить ваши идеи в жизнь.</p>
-                    <a class="button__body" href="#">Расчитать стоимость</a>
+                    <button class="button__body" onclick="openPopup()">Расчитать стоимость</button>
                     <a class=" button__pozvoni" href="#">Позвонить сейчас</a>
                 </div>
                 <div class="proposal__images"><img src="./img/proposal/itemBg1.png" alt=""></div>
@@ -372,7 +409,7 @@
                     <div class="footer__information__social"></div>
                 </div>
                 <div class="footer__button">
-                    <a class="button__body" href="#">Заказать расчет</a>
+                    <button class="button__body" onclick="openPopup()">Заказать расчет</button>
                 </div>
                 <div class="footer__contact">
                     <h4>Контакты</h4>

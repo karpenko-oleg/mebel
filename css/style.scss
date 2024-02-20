@@ -67,33 +67,16 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     overflow: hidden;
-    pointer-events: all;
     transition: .3s ease-in-out;
+    pointer-events: all;
     cursor: pointer;
     &:hover{
         box-shadow: 5px 5px #6f6d6d;
         border: 1px solid #28221f00;
 
     }
-    // span{
-    //     display: block;
-    //     width: 10px;
-    //     height: 100%;
-    //     background-color: #fff;
-    //     box-shadow: 0 0px 25px #adaaaa;
-    //     opacity: 0.1;
-    //     border-radius: 50%;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     // animation: buttonBody 3s ease-in-out infinite alternate;
-    //     // @keyframes buttonBody {
-    //     //     0%{transform: translateX(0);}
-    //     //     100%{transform: translateX(220px);}
-    //     // }
-    // }
     @media (max-width: 585px) {
-        display: block;
+        width: 90%;
         text-align: center;
     }
 }
@@ -108,7 +91,6 @@ html, body{
     &:hover{
         box-shadow: 5px 5px #6f6d6d;
         border: 1px solid #28221f00;
-
     }
     @media (max-width: 585px) {
         display: block;
@@ -118,6 +100,164 @@ html, body{
         text-align: center;
     }
 }
+// Pop-Up
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // background-color: rgba($color: #fff, $alpha: .7);
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+
+    .popup__container{
+        width: 500px;
+        // height: 500px;
+        border-radius: 30px;
+        font-weight: normal;
+        background-color: #fff;
+        padding: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        // box-shadow: 0px 5px 5px #6f6d6d;
+        // border: 1px solid #28221F;
+        @media (max-width: 510px) {
+            width: 100%;
+            padding: 30px;
+        }
+        h2{
+            font-size: 50px;
+            color: #3C6C7F;
+        }
+        form{
+            margin-top: 30px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            :not(:last-child){
+                margin-bottom: 10px;
+            }
+            h5{
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #3C6C7F;
+            }
+            input{
+                border: 1px solid #3C6C7F;
+                height: 50px;
+                font-size: 18px;
+                width: 100%;
+                border-radius: 15px;
+                padding: 5px 20px;
+                // background-color: #D9D9D9;
+            }
+            textarea{
+                border: 1px solid #3C6C7F;
+                // background-color: #D9D9D9;
+                outline: none;
+                padding: 15px;
+                border-radius: 15px;
+                width: 100%;
+                resize: none;
+            }
+        }
+        .closePopup{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+  }
+//pop-up sale
+.popup__sale {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #fff, $alpha: .7);
+    z-index: 9999;
+    .popup__sale__container{
+        width: 700px;
+        height: 500px;
+        border-radius: 30px;
+        font-weight: normal;
+        background-color: #fff;
+        padding: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 5px 5px #6f6d6d;
+        @media (max-width: 710px) {
+            width: 95%;
+            padding: 30px;
+        }
+        @media (max-width: 550px) {
+            height: 100%;
+        }
+        .popup__sale__img{
+            width: 70%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            @media (max-width: 550px) {
+                width: 90%;
+            }
+        }
+        h2{
+            font-size: 50px;
+            text-transform: uppercase;
+            color: #3C6C7F;
+            @media (max-width: 550px) {
+                font-size: 40px;
+            }
+        }
+        p{
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        form{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            :not(:last-child){
+                margin-bottom: 10px;
+            }
+            h5{
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #3C6C7F;
+            }
+            input{
+                height: 50px;
+                font-size: 18px;
+                width: 100%;
+                border-radius: 15px;
+                padding: 5px 20px;
+                background-color: rgba($color: #D9D9D9, $alpha: .4);
+                border: 1px solid #3C6C7F;
+            }
+        }
+        .closePopup{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+  }
 // открытие бургера
 .menu {
     display: none;
@@ -298,19 +438,14 @@ html, body{
                     .pictures__slide__item__title__kontact__button{
                         color: #fff;
                         border: 1px solid #dfdddd;
+                        &:hover{
+                            box-shadow: 5px 5px #6f6d6d;
+                            border: 1px solid #28221f00;
+                            background-color: #D9D9D9;
+                            color: #28221F;
+                        }
                     }
-                }
-                // .pictures__slide__item__title__number{
-                //     position: relative;
-                //     font-size: 40px;
-                //     display: block;
-                //     width: 46%;
-                //     overflow: hidden;
-                //     backdrop-filter: blur(2px);
-                //     margin: 0 auto 50px;
-                //     color: #D3E2EF;
-                // }
-                
+                }                
             }
             
         }
@@ -593,6 +728,27 @@ html, body{
                     font-size: 25px;
                 }
              }
+             #item-9 {
+                font-size: 50px;
+                font-weight: 700;
+                text-transform: uppercase;
+                background-color: rgba($color: #DCDCDC, $alpha: .7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .3s ease-in-out;
+
+                grid-row-start: 4;
+                grid-column-start: 1;
+                grid-row-end: 5;
+                grid-column-end: 2;
+                @media (max-width: 1250px) {
+                    font-size: 35px;
+                }
+                @media (max-width: 460px) {
+                    font-size: 25px;
+                }
+             }
         }
     }
 }
@@ -699,7 +855,6 @@ html, body{
                 }
             }
         }
-    
     .portfolio__swiper{
         position: relative;
         padding: 50px 0;
@@ -719,7 +874,6 @@ html, body{
             background-color: #fff;
             border: 1px solid #282828;
         }
-
         .portfolio__slide{
             width: 100%;
             height: 400px;
@@ -763,8 +917,12 @@ html, body{
             grid-template-columns: 1fr 1fr;
             font-weight: 400;
             row-gap: 15px;
+            h6{
+                border-bottom: 1px solid #0000003b; 
+            }
             strong{
                 text-align: right;
+                border-bottom: 1px solid #0000003b; 
             }
         }
     }
@@ -830,21 +988,25 @@ html, body{
     }
 }
 .partners{
+
     .partners__container{
         display: flex;
         justify-content: space-between;
         width: 100%;
         height: 400px;
+        @media (max-width: 1020px) {
+            flex-direction: column;
+            height: 100%;
+        }
         .partners__text{
             margin-left: 10px;
             width: 400px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            p{
-               
-
-            }
+            @media (max-width: 410px) {
+                width: 100%;       
+               }
             h6{
                 font-size: 40px;
                 flex: 1;
@@ -855,6 +1017,12 @@ html, body{
             width: 600px;
             height: 400px;
             margin-right: 10px;
+            @media (max-width: 1020px) {
+                margin: 20px auto 0;
+            }
+            @media (max-width: 615px) {
+             width: 100%;       
+            }
             img{
                 display: block;
                 width: 300px;
@@ -864,7 +1032,7 @@ html, body{
             }
             .partners__images__item_1{
                 position: absolute;
-                left: 0;
+                left: 12px;
                 top: 0;
                 animation: partners__images 5s ease-in-out infinite alternate;
                 @keyframes partners__images {
@@ -874,13 +1042,14 @@ html, body{
                     75%{transform: translate(-5px, -10px);}
                     100%{transform: translate(0px, 0px);}
                 }
+
             }
             .partners__images__item_2{
                 position: absolute;
                 right: 0;
                 top: 15%;
                 animation: partners__images 8s  ease-in-out infinite alternate;
-
+                
             }
             .partners__images__item_3{
                 position: absolute;
@@ -901,7 +1070,7 @@ html, body{
                 position: absolute;
                 width: 150px;
                 height: 80px;
-                left: 20%;
+                left: 15%;
                 bottom: 10%;
                 animation: partners__images 4s ease-in-out infinite alternate;
 

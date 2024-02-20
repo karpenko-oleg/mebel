@@ -103,3 +103,27 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
       }
     });
   });
+
+  // pop-Up
+    // Функция для открытия pop-up окна
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    };
+    // Функция для закрытия pop-up окна
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    };
+//pop-up sale
+  // Функция для отображения pop-up окна через определенное время
+  function showPopupAfterDelay() {
+    setTimeout(function() {
+      document.getElementById("popup__sale").style.display = "block";
+    }, 30000); // Показать окно через 30 секунд (30000 миллисекунд)
+  }
+  // Функция для закрытия pop-up окна
+  function closePopupSale() {
+    document.getElementById("popup__sale").style.display = "none";
+  }
+
+  // Вызвать функцию для отображения pop-up окна через определенное время
+  showPopupAfterDelay();
