@@ -133,3 +133,10 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
 
   // Вызвать функцию для отображения pop-up окна через определенное время
   showPopupAfterDelay();
+  
+
+  // Маска на номер телефона
+const form = document.querySelector('.form');
+const telSelector = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telSelector);

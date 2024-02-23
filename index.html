@@ -45,13 +45,14 @@
             <div id="popup" class="popup">
                 <div class="popup__container">
                     <h2>Заполните заявку</h2>
-                    <form>
+                    <form class="form">
                         <h5>Ваше имя</h5>
-                        <input type="name" placeholder="Ваше имя">
+                        <input type="name" placeholder="Ваше имя" required>
                         <h5>Ваш номер телефона</h5>
-                        <input type="tel" placeholder="Номер телефона">
+                        <input type="tel" placeholder="Номер телефона" required>
                         <h5>Вид работы</h5>
                         <textarea name="text" placeholder="Введите, что хотите перетянуть и какую хотите ткань" cols="30" rows="5"></textarea>
+                        <input class="form__button" type="submit">
                     </form>
                     <button class="closePopup" onclick="closePopup()"><img src="./img/popUp/close.svg" alt=""></button>
                 </div>
@@ -61,11 +62,12 @@
                     <div class="popup__sale__text">
                         <h2>Выгодное предложение!</h2>
                         <p>Получите скидку на покупку тканей при оформлении заявки на перетяжку мебели. Наша команда готова предложить вам широкий выбор качественных тканей для обновления вашей мебели по выгодной цене. Свяжитесь с нами уже сегодня, чтобы получить подробности и сделать заказ.</p>
-                        <form>
+                        <form class="form">
                             <h5>Ваше имя</h5>
-                            <input type="text">
+                            <input type="text" placeholder="Ваше имя" required>
                             <h5>Ваш номер телефона</h5>
-                            <input type="text" >
+                            <input type="tel" placeholder="Номер телефона" required>
+                            <input class="form__button" type="submit">
                         </form>
                     </div>
                     <img class="popup__sale__img" src="./img/proposal/itemBg1.png" alt="">
@@ -430,6 +432,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/inputmask.min.js"></script>
  <script src="./js/app.js"></script>
 </body>
 </html>

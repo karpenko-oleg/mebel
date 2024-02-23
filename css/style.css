@@ -170,6 +170,15 @@ html, body {
   width: 100%;
   resize: none;
 }
+.popup .popup__container form .form__button {
+  background-color: #3C6C7F;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.popup .popup__container form .form__button:hover {
+  background-color: #315868;
+}
 .popup .popup__container .closePopup {
   position: absolute;
   right: 15px;
@@ -255,11 +264,20 @@ html, body {
 .popup__sale .popup__sale__container form input {
   height: 50px;
   font-size: 18px;
-  width: 100%;
+  width: 80%;
   border-radius: 15px;
   padding: 5px 20px;
   background-color: rgba(217, 217, 217, 0.4);
   border: 1px solid #3C6C7F;
+}
+.popup__sale .popup__sale__container form .form__button {
+  background-color: #3C6C7F;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.popup__sale .popup__sale__container form .form__button:hover {
+  background-color: #315868;
 }
 .popup__sale .popup__sale__container .closePopup {
   position: absolute;
