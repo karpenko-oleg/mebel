@@ -4,8 +4,9 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     speed: 700,
     spaceBetween: 0,
     loop:true,
-    autoplay: true,
-    delay: 8000,
+    autoplay: {
+      delay: 5000,
+    },
     effect: "fade",
   });
 
@@ -13,6 +14,9 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     speed: 700,
     spaceBetween: 20,
     slidesPerView:3.5,
+    autoplay: {
+      delay: 1000,
+    },
     loop:true,
     pagination: {
       el: '.portfolioSwiper_pagination',
@@ -44,18 +48,19 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
 
   const commentsSwiper = new Swiper('.commentsSwiper', {
     speed: 700,
-    spaceBetween: -50,
+    spaceBetween: 20,
     slidesPerView:1.5,
     loop:true,
     parallax:true,
-    autoplay: true,
-    delay: 1000,
+    autoplay: {
+      delay: 2000,
+    },
     centeredSlides: true,
     breakpoints: {
       300: {
         slidesPerView: 1,
       },
-      1000: {
+      760: {
         slidesPerView: 1.5,
       },
     }
@@ -65,8 +70,9 @@ const picturesSwiper = new Swiper('.pictures__swiper', {
     speed: 1000,
     spaceBetween: 20,
     slidesPerView:4.5,
-    autoplay: true,
-    delay: 500,
+    autoplay: {
+      delay: 500,
+    },
     loop:true,
     breakpoints: {
       300: {

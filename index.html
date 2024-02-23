@@ -14,21 +14,21 @@
 <body>
     <div class="wrapper">
         <header class="header ">
-            <h2 class="header__logo"><a href="#">ЛенМастерская<br>перетяжки</a></h2>
+            <a class="header__logo" href="#section1"><img src="./img/header/logo2.png" alt=""></a>
             <button class="burger-btn" id="burgerBtn" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
             <div id="menu" class="menu">
-                <a class="menu-logo" href="#">ЛенМастерская<br>перетяжки</a>
+                <a class="menu-logo" href="#section1">Ленинградская<br><span>перетяжка мебели</span></a>
             <nav>
                 <ul>
-                    <li><a href="#"><img src="./img/header/home.svg" alt=""><strong>Главная</strong></a></li>
-                    <li><a href="#"><img src="./img/header/blog.svg" alt=""><strong>Умения</strong></a></li>
-                    <li><a href="#"><img src="./img/header/galery.svg" alt=""><strong>Портфолио</strong></a></li>
-                    <li><a href="#"><img src="./img/header/otzuvi.svg" alt=""><strong>Отзывы</strong></a></li>
-                    <li><a href="#"><img src="./img/header/kontacti.svg" alt=""><strong>Контакты</strong></a></li>
+                    <li><a href="#section1"><img src="./img/header/home.svg" alt=""><strong>Главная</strong></a></li>
+                    <li><a href="#section2"><img src="./img/header/blog.svg" alt=""><strong>Услуги</strong></a></li>
+                    <li><a href="#section3"><img src="./img/header/galery.svg" alt=""><strong>Портфолио</strong></a></li>
+                    <li><a href="#section4"><img src="./img/header/otzuvi.svg" alt=""><strong>Цены</strong></a></li>
+                    <li><a href="#section5"><img src="./img/header/kontacti.svg" alt=""><strong>Контакты</strong></a></li>
                 </ul>
             </nav>
             </div>
@@ -72,7 +72,7 @@
                     <button class="closePopup" onclick="closePopupSale()"><img src="./img/popUp/close.svg" alt=""></button>
                 </div>
             </div>
-            <section class="pictures">
+            <section class="pictures" id="section1">
                 <div class="pictures__swiper swiper">
                     <div class="pictures__wrapper swiper-wrapper">
                         <div class="pictures__slide swiper-slide">
@@ -139,7 +139,7 @@
                     <h3>Экономия ваших средств</h3>
                 </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="section2">
                 <div class="_title__body _container">
                     <h4>МЫ УМЕЕМ</h4>
                     <p><span>........................</span>предугадываем ваши интересы и стремимся к безупречному результату: ваши идеи, наша работа</p>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="section3">
                 <div class="_title__body _container">
                     <h4>наши работы</h4>
                     <p><span>...............................</span>искусство возрождения: перетяжка мебели нашими профессиональными руками</p>
@@ -192,28 +192,29 @@
                         <h3>Гарантия</h3>
                     </div>
                     <div class="portfolio__container__images">
-                        <div class="portfolio__container__images__left"><img class="portfolio__container__images__visible" src="./img/portfolio/стул_7_2.jpg" alt=""><h4>Современный стиль</h4></div>
-                        <div class="portfolio__container__images__right"><img class="portfolio__container__images__invisible" src="./img/portfolio/стул_7.jpg" alt=""></div>
+                        <div class="portfolio__container__images__left"><video class="portfolio__container__images__visible" src="./img/portfolio/3.2старое кресло.mp4" alt="" type='video/mp4' muted="muted" autoPlay  loop></video><h4>Современный стиль</h4></div>
+                        <div class="portfolio__container__images__right"><video class="portfolio__container__images__invisible" src="./img/portfolio/3.1новое кресло.mp4" alt="" type='video/mp4' muted="muted" autoPlay  loop></div>
                     </div>
                 </div>
                 <div class="portfolio__swiper">
                     <div class="portfolioSwiper swiper">
                         <div class="portfolio__wrapper swiper-wrapper">
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_1.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_2.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_3.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_4_2.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_5.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_6.jpg" alt=""></div>
-                            <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_7.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_1.jpg" alt=""></div>
                           <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/диван_1_2.jpg" alt=""></div>
-                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/диван_2.jpg" alt=""></div>
-                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/другое_1.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_7.jpg" alt=""></div>
                           <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/Кресло_1.jpg" alt=""></div>
-                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/кресло_2.jpg" alt=""></div>
-                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/кресло_3.jpg" alt=""></div>
-                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/кровать_1.jpg" alt=""></div>
                           <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/офисное_1.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_3.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/офисное_2.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_4_2.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/офисное_3.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_6.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/диван_1_3.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_5.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/диван_4.jpg" alt=""></div>
+                          <div class="portfolio__slide swiper-slide"><img src="./img/portfolio/swiper/стул_2.jpg" alt=""></div>
+
+
                         </div>
                         <div class="portfolioSwiper_pagination swiper-pagination"></div>
                         <div class="portfolioSwiper_navPrev swiper-button-prev"></div>
@@ -221,7 +222,7 @@
                       </div>
                 </div>
             </section>
-            <section class="price">
+            <section class="price" id="section4">
                 <div class="_title__body _container">
                     <h4>Стоимость</h4>
                     <p><span>............................</span>узнайте приблизительные расценки на перетяжку мебели или ее ремонт</p>
@@ -321,23 +322,18 @@
                             <div class="commentsSwiper_wrapper swiper-wrapper">
                               <div class="commentsSwiper__slide swiper-slide" >
                                 <img class="commentsSwiper__slide__item_1" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_2" src="./img/commets/image_2.png" alt="">
+                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_3.png" alt="">
                               </div>
                               <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1"  src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3" src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_1"  src="./img/commets/image_4.png" alt="">
+                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_5.png" alt="">
+                                <img class="commentsSwiper__slide__item_3" src="./img/commets/image_6.png" alt="">
                               </div>
                               <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1" src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
-                              </div>
-                              <div class="commentsSwiper__slide swiper-slide" >
-                                <img class="commentsSwiper__slide__item_1"  src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_1.png" alt="">
-                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_1.png" alt="">
+                                <img class="commentsSwiper__slide__item_1" src="./img/commets/image_7.png" alt="">
+                                <img class="commentsSwiper__slide__item_2"  src="./img/commets/image_8.png" alt="">
+                                <img class="commentsSwiper__slide__item_3"  src="./img/commets/image_9.png" alt="">
                               </div>
                               
                             </div>
@@ -387,7 +383,7 @@
                 </div>
                 <div class="proposal__images"><img src="./img/proposal/itemBg1.png" alt=""></div>
             </section>
-            <section class="presents">
+            <section class="presents" id="section5">
                 <div class="presents__swiper swiper">
                     <div class="presents__wrapper swiper-wrapper">
                         <div class="presents__slide swiper-slide"><img src="./img/presents/item_1.png" alt=""></div>
@@ -402,14 +398,22 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__top _container">
+            <div class="footer__top">
+                <img src="./img/header/logo2.png" alt="">
+            </div>
+            <div class="footer__center _container">
                 <div class="footer__information">
-                    <div class="footer__information__logo">Logo</div>
-                    <h3>Мы специализируемся на перетяжке мебели с использованием любых текстильных материалов</h3>
+                    <div class="footer__information__logo"><img src="./img/calculation/qr.png" alt=""></div>
+                    <h3>Сканируйте QR для быстрого перехода в чат, где мы вас проконсультируем по перетяжке мебели и выбору ткани</h3>
                     <div class="footer__information__social"></div>
                 </div>
                 <div class="footer__button">
                     <button class="button__body" onclick="openPopup()">Заказать расчет</button>
+                    <div class="footer__social">
+                        <img src="./img/footer/vkontakte.svg" alt="">
+                        <img src="./img/footer/whatsapp.svg" alt="">
+                        <img src="./img/footer/телеграм.svg" alt="">
+                    </div>
                 </div>
                 <div class="footer__contact">
                     <h4>Контакты</h4>

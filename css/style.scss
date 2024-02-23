@@ -277,13 +277,12 @@ html, body{
     color: #fff;
     z-index: 100;
     padding: 20px 40px;
-    h2{
-        font-size: 30px;
-        @media (max-width: 520px) {
-            font-size: 20px;
-        }
-        a{
-            color: #fff;
+    .header__logo{
+        width: 100px;
+        height: 100px;
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
     .burger-btn {
@@ -312,12 +311,16 @@ html, body{
         height: 100vh;
         background-color: #002A32;
         .menu-logo{
-            display: flex;
-            justify-content: center;
+            text-transform: uppercase;
             margin-top: 20px;
-            font-size: 25px;
-            color: #fff;
             text-align: center;
+            font-size: 22px;
+            color: #fff;
+            display: block;
+            span{
+                display: block;
+                font-size: 16px;
+            }
         }
         nav ul{
             width: 60px;
@@ -357,6 +360,7 @@ html, body{
         padding: 15px;
         border-radius: 10px;
         animation: buttonTkani 12s 5s infinite alternate;
+        cursor: pointer;
         @keyframes buttonTkani {
             0%{}
             30%{background-color: #3C6C7F; color: #fff;}
@@ -369,8 +373,9 @@ html, body{
         left: 20px;
         top: 85vh;
         img{
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
             @keyframes headersocialIcon {
                 0%{}
                 100%{scale: 1.1; rotate: 20deg; transform: translate(-10px, 6px);}
@@ -977,7 +982,7 @@ html, body{
         }
         .calculation__item__images{
             width: 150px;
-            height: 150px;
+            height: 100%;
             img{
                 width: 100%;
                 height: 100%;
@@ -1112,7 +1117,7 @@ html, body{
                     @media (max-width: 580px) {
                         width: 80%;
                     }
-                    @media (max-width: 480px) {
+                    @media (max-width: 510px) {
                         width: 100%;
                     }
                 }
@@ -1120,6 +1125,9 @@ html, body{
                 margin-left: 150px;
                 @media (max-width: 700px) {
                     margin-left: 50px;
+                }
+                @media (max-width: 510px) {
+                    margin-left: 0;
                 }
                }             
             }
@@ -1319,14 +1327,34 @@ html, body{
 .footer{
     border-top: 1px solid #6f6d6d;
     padding-top: 30px;
+    background-color: #111d30;
     .footer__top{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .footer__center{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: #fff;
+        
         @media (max-width: 840px) {
             flex-direction: column;
             :not(:last-child){
                 margin-bottom: 30px;
+            }
+        }
+        .footer__information__logo{
+            width: 90px;
+            height: 90px;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                height: 100%;
             }
         }
         .footer__information{
@@ -1334,30 +1362,42 @@ html, body{
             h3{
                 width: 300px;
                 font-size: 20px;
-                color: #264A51;
                 line-height: 130%;
                 @media (max-width: 400px) {
                     width: 100%;
                 }
             }
         }
+        .footer__social{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            img{
+                cursor: pointer;
+                width:40px;
+                height: 40px;
+                transition: .2s;
+                &:hover{
+                    transform: translateY(3px);
+                }
+            }
+        }
         .footer__contact{
             width: 200px;
-        
             h4{
                 font-size: 30px;
                 font-weight: 700;
-                color: #264A51;
                 margin-bottom: 20px;
             }
             a{
                 display: block;
-                color: #264A51;
+                color: #fff;
                 font-size: 20px;
                 line-height: 180%;
                 transition: .2s;
                 &:hover{
-                    color: #000000; 
+                    color: #e4b167; 
                 }
             }
         }
